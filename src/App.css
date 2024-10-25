@@ -1,0 +1,120 @@
+/* App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff; /* White text color for contrast */
+  background-color: #282c34; /* Fallback background color */
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* Hide overflow from video */
+  display: flex; /* Use flexbox to position items */
+  justify-content: flex-end; /* Align container to the right */
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Ensure video is behind other elements */
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Bring the form in front of the video */
+  padding: 20px;
+  width: 400px; /* Fixed width for the form */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  margin: 20px; /* Margin to create spacing from the right */
+  overflow-y: auto; /* Enable scrolling if the content overflows */
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff79c6; /* Accent color for the title */
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  color: #ffb86c; /* Light orange color for labels */
+}
+
+input[type='text'],
+input[type='email'],
+input[type='file'],
+select,
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px;
+  margin-bottom: 15px; /* Space between fields */
+  border: none;
+  border-radius: 4px;
+  background: #fff; /* White background for inputs */
+  color: #333; /* Dark text color for input */
+}
+
+input[type='radio'] {
+  margin-right: 5px; /* Space between radio buttons and labels */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between; /* Space buttons apart */
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #50fa7b; /* Green color for buttons */
+  color: #333; /* Dark color for text */
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background: #3be47b; /* Darker green on hover */
+}
+
+button[type='button'] {
+  background: #6272a4; /* Purple color for secondary button */
+}
+
+button[type='button']:hover {
+  background: #505c97; /* Darker purple on hover */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Responsive styles for smaller screens */
+  .container {
+    width: 90%; /* Use more space on smaller screens */
+    margin: 10px; /* Reduce margin for smaller screens */
+  }
+
+  body {
+    background-color: #44475a; /* Darker background for mobile */
+  }
+}
